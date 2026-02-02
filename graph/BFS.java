@@ -33,7 +33,7 @@ public class BFS {
         bfs(adj, vis, 1, q, bfsResult);
 
         for (int i = 0; i < bfsResult.size(); i++) {
-            System.out.print(bfsResult.get(i));
+            System.out.print(bfsResult.get(i)+" ");
         }
     }
 
