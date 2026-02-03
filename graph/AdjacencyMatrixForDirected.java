@@ -2,7 +2,7 @@ package graph;
 
 public class AdjacencyMatrixForDirected {
     public static void main(String[] args) {
-        int v= 4;
+        int v = 4;
         int[][] matrix = new int[v+1][v+1];
         addEdge(matrix,1,2);
         addEdge(matrix,1,3);

@@ -6,18 +6,18 @@ import java.util.Scanner;
 public class AdjacencyList {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("enter the number of rows: ");
-        int row = sc.nextInt();
+        System.out.println("enter the number of node: ");
+        int node = sc.nextInt();
         sc.close();
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
-        for (int i = 0; i <= row; i++) {
+        for (int i = 0; i <= node; i++) {
             adj.add(new ArrayList<>());
         }
         addEdge(adj, 1, 2);
         addEdge(adj, 1, 3);
         addEdge(adj, 3, 2);
         addEdge(adj, 1, 4);
-        print(adj, row);
+        print(adj, node);
     }
 
     private static void addEdge(ArrayList<ArrayList<Integer>> adj, int u, int v) {
@@ -28,11 +28,11 @@ public class AdjacencyList {
 
     }
 
-    private static void print(ArrayList<ArrayList<Integer>> adj, int row) {
-        for (int i = 1; i <= row; i++) {
+    private static void print(ArrayList<ArrayList<Integer>> adj, int node) {
+        for (int i = 1; i <= node; i++) {
             System.out.print(i + " -> ");
-            for (int node:adj.get(i)) {
-                System.out.print(node+ " ");
+            for (int nodes:adj.get(i)) {
+                System.out.print(nodes+ " ");
             }
             System.out.println();
         }
