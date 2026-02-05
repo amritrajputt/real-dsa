@@ -25,7 +25,6 @@ public class AdjacencyList {
         adj.get(v).add(u);
 
         // adj.get(u).add(v); //for directed add only this line
-
     }
 
     private static void print(ArrayList<ArrayList<Integer>> adj, int node) {
