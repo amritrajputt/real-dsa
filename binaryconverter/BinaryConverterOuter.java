@@ -4,13 +4,20 @@ public class BinaryConverterOuter {
         public static String BinaryConverter(int n) {
             if (n == 0)
                 return "0";
-            StringBuilder sb = new StringBuilder();
+            String s = new String();
             while (n > 0) {
                 int rem = n % 2;
-                sb.append(rem);
+                s += rem;
                 n = n / 2;
             }
-            return sb.reverse().toString();
+            return reverse(s);
         }
+    }
+    private static String reverse(String s){
+        String str = "";
+        for(int i= 0;i<s.length();i++){
+            str = s.charAt(i)+str; 
+        }
+        return str;
     }
 }

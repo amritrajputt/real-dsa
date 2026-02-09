@@ -7,6 +7,6 @@ public class Main {
         for(int i = 0;i<words.length;i++){
             obj.insertion(words[i]);
         }
-        System.out.println(obj.search("thor"));
+        System.out.println(obj.search("their"));
     }
 }
