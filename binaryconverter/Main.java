@@ -3,8 +3,7 @@ package binaryconverter;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
-
-public class Solution {
+public class Main {
     public static void main(String[] args) {
 
         try {
@@ -16,12 +15,8 @@ public class Solution {
                 String[] parts = line.split(" ");
                 int input = Integer.parseInt(parts[0]);
                 String expectedOutput = parts[1];
-                String actualOutput = "";
-                if (input >= 0) {
-                    actualOutput = BinaryConverter.decimalToBinaryConverter(input);
-                } else if (input < 0) {
-                    actualOutput = BinaryConverter.negativeIntegerToBinary(input);
-                }
+                String actualOutput = BinaryConverterUsingBitManipulation.integerToBinary(input);
+               
 
                 if (actualOutput.equals(expectedOutput)) {
                     System.out.println("Test " + testNumber + " passed");
