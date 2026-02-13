@@ -4,11 +4,11 @@ public class AdjacencyMatrixForDirected {
     public static void main(String[] args) {
         int v = 4;
         int[][] matrix = new int[v+1][v+1];
-        addEdge(matrix,1,2);
-        addEdge(matrix,1,3);
-        addEdge(matrix,3,2);
-        addEdge(matrix,1,4);
-        print(matrix, v);
+        addEdge (matrix,1,2);
+        addEdge (matrix,1,3);
+        addEdge (matrix,3,2);
+        addEdge (matrix,1,4);
+        print (matrix, v);
     }
     private static void addEdge(int [][]matrix,int i,int j){
         matrix[i][j] = 1;

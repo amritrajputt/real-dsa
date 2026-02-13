@@ -16,10 +16,10 @@ public class BinaryConverter {
     public static String negativeIntegerToBinary(int n) {
         long positive = Math.abs((long) n);
         String positiveNumberBinary = decimalToBinaryConverter(positive);
-        StringBuilder one = new StringBuilder();
         while (positiveNumberBinary.length() < 32) {
             positiveNumberBinary = "0" + positiveNumberBinary;
         }
+        StringBuilder one = new StringBuilder();
         for (int i = 0; i < positiveNumberBinary.length(); i++) {
             char c = positiveNumberBinary.charAt(i);
             if (c == '1') {

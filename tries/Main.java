@@ -5,7 +5,9 @@ public class Main {
     String[]  words= {"the","there","their","any"};
     Tries obj = new Tries();
         for(int i = 0;i<words.length;i++){
-            obj.insertion(words[i]);
+            String s = words[i];
+            // s.charAt(s.length()-1) == ',' || 
+            obj.insertion(s);
         }
         System.out.println(obj.search("their"));
     }
