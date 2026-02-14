@@ -45,5 +45,8 @@ public class Tries {
         }
         return true;
     }
+    public static void preProcess(String paragraph){
+        // open text file filter out words call insert function for each word
+    }
 }
 
