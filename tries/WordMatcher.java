@@ -9,7 +9,7 @@ public class WordMatcher {
     word = word.toLowerCase();
     
     for (char c : word.toCharArray()) {
-        int index = c - 'a';
+        int index = (int) c ;
         if (curr.children[index] == null) {
             return false;
         }

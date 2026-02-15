@@ -8,18 +8,22 @@ public class BuildTrie {
         boolean endOfWord;
 
         Node() {
-            children = new Node[26];
+            children = new Node[256];
             endOfWord = false;
         }
     }
 
     public void preProcess(String paragraph) {
+
         paragraph = paragraph.toLowerCase();
         StringBuilder cleaned = new StringBuilder();
+
         for (int i = 0; i < paragraph.length(); i++) {
             char ch = paragraph.charAt(i);
-            if ((ch >= 'a' && ch <= 'z') || ch == ' ') {
+            if ((ch >= 'a' && ch <= 'z') || ch == ' ' || ch == '-' || ch == '/' || ch != ',' && ch == '.') {
                 cleaned.append(ch);
+            }else {
+                continue;
             }
         }
         String cleanedParagraph = cleaned.toString();
@@ -37,7 +41,7 @@ public class BuildTrie {
         int len = word.length();
         for (int i = 0; i < len; i++) {
             char ch = word.charAt(i);
-            int index = ch - 'a';
+            int index = (int)ch;
             if (curr.children[index] == null) {
                 curr.children[index] = new Node();
             }
