@@ -19,7 +19,7 @@ public class Calculate{
 
         if(dp[x] != null) return dp[x];
 
-        BigInteger cube = BigInteger.valueOf(8L)
+        BigInteger cube = BigInteger.valueOf(8)
                         .multiply(BigInteger.valueOf(x))
                         .multiply(BigInteger.valueOf(x))
                         .multiply(BigInteger.valueOf(x));
