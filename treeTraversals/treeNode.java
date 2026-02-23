@@ -10,9 +10,6 @@ public class treeNode {
         this.right = null;
     }
 
-    public static  int NodeValue(treeNode node){
-        return (node == null) ? -1 : node.val;
-    }
     public static treeNode left(treeNode node){
          return (node == null) ? null : node.left;
     }
