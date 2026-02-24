@@ -1,6 +1,7 @@
 package treeTraversals;
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,5 +14,12 @@ public class Main {
 
         List<List<Integer>> result = BFS.bfs(root);
         System.out.println(result);
+        ArrayList<Integer> preOrder = PreOrder.preOrderTraversals(root);
+        System.out.println(preOrder);
+        ArrayList<Integer> inOrder = Inorder.inOrderTraversals(root);
+        System.out.println(inOrder);
+        ArrayList<Integer> postOrder = PostOrder.postOrderTraversals(root);
+        System.out.println(postOrder);
+
     }
 }
