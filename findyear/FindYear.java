@@ -11,7 +11,7 @@ public class FindYear {
             String basePath = "D:/Problem - Find Year/Assignment/data";
             File data = new File(basePath);
             File[] getYears = data.listFiles(File::isDirectory);
-
+if(getYears.length==0 || getYears == null) return -1;
             Arrays.sort(getYears,
                     (a, b) -> Integer.compare(
                             Integer.parseInt(a.getName()),
@@ -41,7 +41,7 @@ public class FindYear {
                             return Integer.parseInt(current.getName());
                         }
                     }
-                    
+
                     return -1;
                 }
             }
@@ -52,21 +52,20 @@ public class FindYear {
         return -1;
     }
 
-    private static int extractPopulation(File file) throws Exception {
-        BufferedReader br = new BufferedReader(new FileReader(file));
+   private static int extractPopulation(File file) throws Exception {
+    try (BufferedReader br = new BufferedReader(new FileReader(file))) {
         String line;
         while ((line = br.readLine()) != null) {
             if (line.contains("Number of people")) {
-                br.close();
                 return Integer.parseInt(line.replaceAll("[^0-9]", ""));
             }
         }
-        br.close();
         return -1;
     }
+}
 
     public static void main(String[] args) {
-        int result = findYear(330);
+        int result = findYear(329);
         if (result != -1)
             System.out.println("Found in year: " + result);
         else
