@@ -11,7 +11,7 @@ public class FindYear {
             String basePath = "D:/Problem - Find Year/Assignment/data";
             File data = new File(basePath);
             File[] getYears = data.listFiles(File::isDirectory);
-if(getYears.length==0 || getYears == null) return -1;
+            if(getYears.length==0 || getYears == null) return -1;
             Arrays.sort(getYears,
                     (a, b) -> Integer.compare(
                             Integer.parseInt(a.getName()),
