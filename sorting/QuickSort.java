@@ -2,12 +2,13 @@ package sorting;
 
 public class QuickSort {
     public static void main(String[] args) {
-        int[] arr = { 3, 3, 4, 5, 6, 67, 7, 8 };
+        int[] arr = { 3, 3, 4, 5, 6, 67, 7, 8, -1, 90 };
         int low = 0;
         int high = arr.length - 1;
         quickSort(arr, low, high);
+        System.out.print("Sorted array: ");
         for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
+            System.out.print(arr[i] + " ");
         }
     }
 
