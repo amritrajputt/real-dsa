@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class AdjacencyList {
     public static void main(String[] args) {
+        
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the number of node: ");
         int node = sc.nextInt();
