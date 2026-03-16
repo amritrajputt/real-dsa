@@ -1,0 +1,29 @@
+package BST;
+
+public class Quad {
+    int max;
+    int min;
+    int size;
+    int sum;
+
+    public Quad(int max, int min, int size, int sum) {
+        this.max = max;
+        this.min = min;
+        this.size = size;
+        this.sum = sum;
+    }
+}
+
+class Implementation {
+    public static Quad maxMinSizeSum(TreeNode root) {
+        if (root == null)
+            return new Quad(Integer.MIN_VALUE, Integer.MAX_VALUE, 0, 0);
+        Quad lst = maxMinSizeSum(root.left);
+        Quad rst = maxMinSizeSum(root.right);
+        int max = Math.max(root.val, Math.max(lst.max, rst.max));
+        int min = Math.min(root.val, Math.min(lst.min, rst.min));
+        int size = 1 + lst.size + rst.size;
+        int sum = root.val + lst.sum + rst.sum;
+        return new Quad(max, min, size, sum);
+    }
+}

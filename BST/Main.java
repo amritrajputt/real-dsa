@@ -18,5 +18,10 @@ public class Main {
         System.out.println(found);
         TreeNode val = DeletionInBST.delete(node.root, 10);
         System.out.println(val.val);
+        Quad q = new Quad(43, 1, 7, 99);
+        System.out.println("Max: " + q.max);
+System.out.println("Min: " + q.min);
+System.out.println("Size: " + q.size);
+System.out.println("Sum: " + q.sum);
     }
 }
